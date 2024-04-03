@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="shortcut icon" href="../icoD.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        div {
+            padding: 5px;
+        }
+
+        div.edit {
+            padding-left: 90px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulario</h1>    
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+              <label for="inome">Nome:</label>
+              <input type="text" name="nome" id="inome" required minlength="3" maxlength="30">
+            </div>
+            <div>
+              <label for="iemail">E-mail</label>
+              <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="email">
+            </div>
+            <div>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" pattern="^\(d{2}\)\d{8,9}$" autocomplete="tel" required placeholder="(dd)" value="()">
+            </div>
+            <div class="edit" style="display: inline-block;">
+                <input type="submit" value="Enviar" style="margin-right: 20px;">
+                <input type="reset" value="Limpar">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
